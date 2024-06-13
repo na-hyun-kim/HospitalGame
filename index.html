@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOBALAB Hospital Simulator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <header>
+        <h1>Hospital Simulator Game</h1>
+        <p id="intro-text">You are a doctor at UCSF. Your goal is to diagnose patients correctly throughout your shift. Each interaction will test your medical knowledge and decision-making skills. You will receive breaks where you can decide to either do nothing or see telemedicine patients. Good luck!</p>
+    </header>
+    <body>
+        <div class="main">
+            <div class="game-view hidden" id="game-view">
+                <h2 id="scene-title">Introduction</h2>
+
+                <div id="game-status">
+                    <p id="day">Day: 1</p>
+                    <p id="score">Score: 0</p>
+                    <p id="timer">Time: 00:00</p>
+                </div>
+
+                <div class="break-timer" id="break-timer">&nbsp;</div>
+                <p class="" id="patient-counter">Patients Diagnosed: 0</p>
+                <p class="" id="patients-left">&nbsp;</p>
+                <p class="hidden" id="telemedicine-count">Telemedicine Sessions: 0</p>
+                <p class="hidden" id="final-score">Final Score: 0</p>
+                <p id="scene-story">&nbsp;</p>
+                <div class="hidden" id="summary-container">&nbsp;</div>
+                <div class="disease-chart hidden" id="disease-chart"><table>
+                    <tr><th>Disease</th><th>Symptoms</th></tr>
+                    <tr><td>Pneumonia</td><td>Coughing, Fever, Chills, Shortness of breath</td></tr>
+                    <tr><td>Stroke</td><td>Weakness in one arm, Slurred speech</td></tr>
+                    <tr><td>Heart Attack</td><td>Chest pain, Shortness of breath</td></tr>
+                    <tr><td>Anxiety Attack</td><td>Rapid heart rate, Sweating, Trembling</td></tr>
+                </table></div>
+                <div id="formula-container" class="hidden">
+                    Calculated Value: <input value="0" type="text" id="formulaInput">
+                    <div id="slider-container" class="slideContainer hidden">
+                        Thats right! Now find the value on this slider
+                        <input value="0" style="width: 75%; margin: 20px;" type="range" min="0" max="10" id="myRange" step="0.1" class="slider">
+                        <p>Slider Value: <span id="value"></span></p>
+                    </div>
+                </div>
+                <div class="choices" id="choices">&nbsp;</div>
+            </div>
+
+            <button id="start-button">Start Game</button>
+
+            <div class="game-over hidden" id="game-over">
+                <div class="game-over-card">
+                    <h2>Game Over!</h2>
+                    <p id="final-message">Thank you for playing.</p>
+                    <button class="hidden" id="restart-game-btn">Restart</button>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

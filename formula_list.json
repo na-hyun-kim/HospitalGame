@@ -1,0 +1,902 @@
+[
+    {
+        "": "0",
+        "patient #": "0",
+        "formula": "a",
+        "a": 1,
+        "b": 7,
+        "difficulty": "0",
+        "corr_answer": 1.0
+    },
+    {
+        "": "1",
+        "patient #": "1",
+        "formula": "a + b/2",
+        "a": 3,
+        "b": 2,
+        "difficulty": "2",
+        "corr_answer": 4.0
+    },
+    {
+        "": "2",
+        "patient #": "2",
+        "formula": "a + b",
+        "a": 2,
+        "b": 3,
+        "difficulty": "1",
+        "corr_answer": 5.0
+    },
+    {
+        "": "3",
+        "patient #": "3",
+        "formula": "-a/4 + b",
+        "a": 1,
+        "b": 8,
+        "difficulty": "4",
+        "corr_answer": 7.75
+    },
+    {
+        "": "4",
+        "patient #": "4",
+        "formula": "a + b",
+        "a": 3,
+        "b": 2,
+        "difficulty": "1",
+        "corr_answer": 5.0
+    },
+    {
+        "": "5",
+        "patient #": "5",
+        "formula": "-a/4 + b",
+        "a": 8,
+        "b": 6,
+        "difficulty": "3",
+        "corr_answer": 4.0
+    },
+    {
+        "": "6",
+        "patient #": "6",
+        "formula": "a + b",
+        "a": 4,
+        "b": 8,
+        "difficulty": "1",
+        "corr_answer": 12.0
+    },
+    {
+        "": "7",
+        "patient #": "7",
+        "formula": "a + b/2",
+        "a": 3,
+        "b": 7,
+        "difficulty": "3",
+        "corr_answer": 6.5
+    },
+    {
+        "": "8",
+        "patient #": "8",
+        "formula": "a",
+        "a": 7,
+        "b": 2,
+        "difficulty": "0",
+        "corr_answer": 7.0
+    },
+    {
+        "": "9",
+        "patient #": "9",
+        "formula": "a/2",
+        "a": 1,
+        "b": 2,
+        "difficulty": "2",
+        "corr_answer": 0.5
+    },
+    {
+        "": "10",
+        "patient #": "10",
+        "formula": "a + b",
+        "a": 4,
+        "b": 2,
+        "difficulty": "1",
+        "corr_answer": 6.0
+    },
+    {
+        "": "11",
+        "patient #": "11",
+        "formula": "-a/4 + b",
+        "a": 3,
+        "b": 3,
+        "difficulty": "4",
+        "corr_answer": 2.25
+    },
+    {
+        "": "12",
+        "patient #": "12",
+        "formula": "a + b/2",
+        "a": 3,
+        "b": 3,
+        "difficulty": "3",
+        "corr_answer": 4.5
+    },
+    {
+        "": "13",
+        "patient #": "13",
+        "formula": "a/2",
+        "a": 4,
+        "b": 5,
+        "difficulty": "1",
+        "corr_answer": 2.0
+    },
+    {
+        "": "14",
+        "patient #": "14",
+        "formula": "-a/4 + b",
+        "a": 4,
+        "b": 7,
+        "difficulty": "3",
+        "corr_answer": 6.0
+    },
+    {
+        "": "15",
+        "patient #": "15",
+        "formula": "a/2",
+        "a": 5,
+        "b": 9,
+        "difficulty": "2",
+        "corr_answer": 2.5
+    },
+    {
+        "": "16",
+        "patient #": "16",
+        "formula": "a + b",
+        "a": 7,
+        "b": 9,
+        "difficulty": "1",
+        "corr_answer": 16.0
+    },
+    {
+        "": "17",
+        "patient #": "17",
+        "formula": "a + b",
+        "a": 6,
+        "b": 4,
+        "difficulty": "1",
+        "corr_answer": 10.0
+    },
+    {
+        "": "18",
+        "patient #": "18",
+        "formula": "a",
+        "a": 8,
+        "b": 5,
+        "difficulty": "0",
+        "corr_answer": 8.0
+    },
+    {
+        "": "19",
+        "patient #": "19",
+        "formula": "a + b/2",
+        "a": 3,
+        "b": 3,
+        "difficulty": "3",
+        "corr_answer": 4.5
+    },
+    {
+        "": "20",
+        "patient #": "20",
+        "formula": "a",
+        "a": 7,
+        "b": 4,
+        "difficulty": "0",
+        "corr_answer": 7.0
+    },
+    {
+        "": "21",
+        "patient #": "21",
+        "formula": "a + b/2",
+        "a": 1,
+        "b": 10,
+        "difficulty": "2",
+        "corr_answer": 6.0
+    },
+    {
+        "": "22",
+        "patient #": "22",
+        "formula": "a + b",
+        "a": 1,
+        "b": 3,
+        "difficulty": "1",
+        "corr_answer": 4.0
+    },
+    {
+        "": "23",
+        "patient #": "23",
+        "formula": "a + b",
+        "a": 7,
+        "b": 4,
+        "difficulty": "1",
+        "corr_answer": 11.0
+    },
+    {
+        "": "24",
+        "patient #": "24",
+        "formula": "a/2",
+        "a": 4,
+        "b": 6,
+        "difficulty": "1",
+        "corr_answer": 2.0
+    },
+    {
+        "": "25",
+        "patient #": "25",
+        "formula": "a",
+        "a": 5,
+        "b": 10,
+        "difficulty": "0",
+        "corr_answer": 5.0
+    },
+    {
+        "": "26",
+        "patient #": "26",
+        "formula": "a + b",
+        "a": 2,
+        "b": 10,
+        "difficulty": "1",
+        "corr_answer": 12.0
+    },
+    {
+        "": "27",
+        "patient #": "27",
+        "formula": "a + b",
+        "a": 3,
+        "b": 10,
+        "difficulty": "1",
+        "corr_answer": 13.0
+    },
+    {
+        "": "28",
+        "patient #": "28",
+        "formula": "a",
+        "a": 5,
+        "b": 5,
+        "difficulty": "0",
+        "corr_answer": 5.0
+    },
+    {
+        "": "29",
+        "patient #": "29",
+        "formula": "a + b",
+        "a": 1,
+        "b": 7,
+        "difficulty": "1",
+        "corr_answer": 8.0
+    },
+    {
+        "": "30",
+        "patient #": "30",
+        "formula": "-a/4 + b",
+        "a": 1,
+        "b": 9,
+        "difficulty": "4",
+        "corr_answer": 8.75
+    },
+    {
+        "": "31",
+        "patient #": "31",
+        "formula": "-a/4 + b",
+        "a": 6,
+        "b": 3,
+        "difficulty": "4",
+        "corr_answer": 1.5
+    },
+    {
+        "": "32",
+        "patient #": "32",
+        "formula": "a + b",
+        "a": 1,
+        "b": 7,
+        "difficulty": "1",
+        "corr_answer": 8.0
+    },
+    {
+        "": "33",
+        "patient #": "33",
+        "formula": "-a/4 + b",
+        "a": 4,
+        "b": 4,
+        "difficulty": "3",
+        "corr_answer": 3.0
+    },
+    {
+        "": "34",
+        "patient #": "34",
+        "formula": "a",
+        "a": 7,
+        "b": 9,
+        "difficulty": "0",
+        "corr_answer": 7.0
+    },
+    {
+        "": "35",
+        "patient #": "35",
+        "formula": "a",
+        "a": 8,
+        "b": 6,
+        "difficulty": "0",
+        "corr_answer": 8.0
+    },
+    {
+        "": "36",
+        "patient #": "36",
+        "formula": "-a/4 + b",
+        "a": 1,
+        "b": 2,
+        "difficulty": "4",
+        "corr_answer": 1.75
+    },
+    {
+        "": "37",
+        "patient #": "37",
+        "formula": "a + b",
+        "a": 2,
+        "b": 7,
+        "difficulty": "1",
+        "corr_answer": 9.0
+    },
+    {
+        "": "38",
+        "patient #": "38",
+        "formula": "a/2",
+        "a": 1,
+        "b": 3,
+        "difficulty": "2",
+        "corr_answer": 0.5
+    },
+    {
+        "": "39",
+        "patient #": "39",
+        "formula": "a",
+        "a": 6,
+        "b": 3,
+        "difficulty": "0",
+        "corr_answer": 6.0
+    },
+    {
+        "": "40",
+        "patient #": "40",
+        "formula": "-a/4 + b",
+        "a": 8,
+        "b": 3,
+        "difficulty": "3",
+        "corr_answer": 1.0
+    },
+    {
+        "": "41",
+        "patient #": "41",
+        "formula": "a + b/2",
+        "a": 7,
+        "b": 3,
+        "difficulty": "3",
+        "corr_answer": 8.5
+    },
+    {
+        "": "42",
+        "patient #": "42",
+        "formula": "a",
+        "a": 3,
+        "b": 4,
+        "difficulty": "0",
+        "corr_answer": 3.0
+    },
+    {
+        "": "43",
+        "patient #": "43",
+        "formula": "a/2",
+        "a": 3,
+        "b": 3,
+        "difficulty": "2",
+        "corr_answer": 1.5
+    },
+    {
+        "": "44",
+        "patient #": "44",
+        "formula": "a/2",
+        "a": 7,
+        "b": 9,
+        "difficulty": "2",
+        "corr_answer": 3.5
+    },
+    {
+        "": "45",
+        "patient #": "45",
+        "formula": "a + b",
+        "a": 6,
+        "b": 6,
+        "difficulty": "1",
+        "corr_answer": 12.0
+    },
+    {
+        "": "46",
+        "patient #": "46",
+        "formula": "a + b/2",
+        "a": 6,
+        "b": 10,
+        "difficulty": "2",
+        "corr_answer": 11.0
+    },
+    {
+        "": "47",
+        "patient #": "47",
+        "formula": "-a/4 + b",
+        "a": 6,
+        "b": 7,
+        "difficulty": "4",
+        "corr_answer": 5.5
+    },
+    {
+        "": "48",
+        "patient #": "48",
+        "formula": "a/2",
+        "a": 4,
+        "b": 3,
+        "difficulty": "1",
+        "corr_answer": 2.0
+    },
+    {
+        "": "49",
+        "patient #": "49",
+        "formula": "a + b/2",
+        "a": 1,
+        "b": 5,
+        "difficulty": "3",
+        "corr_answer": 3.5
+    },
+    {
+        "": "50",
+        "patient #": "50",
+        "formula": "a + b",
+        "a": 8,
+        "b": 4,
+        "difficulty": "1",
+        "corr_answer": 12.0
+    },
+    {
+        "": "51",
+        "patient #": "51",
+        "formula": "a",
+        "a": 4,
+        "b": 10,
+        "difficulty": "0",
+        "corr_answer": 4.0
+    },
+    {
+        "": "52",
+        "patient #": "52",
+        "formula": "a",
+        "a": 3,
+        "b": 7,
+        "difficulty": "0",
+        "corr_answer": 3.0
+    },
+    {
+        "": "53",
+        "patient #": "53",
+        "formula": "a + b/2",
+        "a": 2,
+        "b": 4,
+        "difficulty": "2",
+        "corr_answer": 4.0
+    },
+    {
+        "": "54",
+        "patient #": "54",
+        "formula": "-a/4 + b",
+        "a": 1,
+        "b": 2,
+        "difficulty": "4",
+        "corr_answer": 1.75
+    },
+    {
+        "": "55",
+        "patient #": "55",
+        "formula": "a",
+        "a": 2,
+        "b": 2,
+        "difficulty": "0",
+        "corr_answer": 2.0
+    },
+    {
+        "": "56",
+        "patient #": "56",
+        "formula": "a + b",
+        "a": 6,
+        "b": 9,
+        "difficulty": "1",
+        "corr_answer": 15.0
+    },
+    {
+        "": "57",
+        "patient #": "57",
+        "formula": "-a/4 + b",
+        "a": 3,
+        "b": 5,
+        "difficulty": "4",
+        "corr_answer": 4.25
+    },
+    {
+        "": "58",
+        "patient #": "58",
+        "formula": "-a/4 + b",
+        "a": 8,
+        "b": 6,
+        "difficulty": "3",
+        "corr_answer": 4.0
+    },
+    {
+        "": "59",
+        "patient #": "59",
+        "formula": "a + b/2",
+        "a": 2,
+        "b": 8,
+        "difficulty": "2",
+        "corr_answer": 6.0
+    },
+    {
+        "": "60",
+        "patient #": "60",
+        "formula": "a + b",
+        "a": 7,
+        "b": 7,
+        "difficulty": "1",
+        "corr_answer": 14.0
+    },
+    {
+        "": "61",
+        "patient #": "61",
+        "formula": "a/2",
+        "a": 5,
+        "b": 2,
+        "difficulty": "2",
+        "corr_answer": 2.5
+    },
+    {
+        "": "62",
+        "patient #": "62",
+        "formula": "a",
+        "a": 7,
+        "b": 7,
+        "difficulty": "0",
+        "corr_answer": 7.0
+    },
+    {
+        "": "63",
+        "patient #": "63",
+        "formula": "a + b/2",
+        "a": 6,
+        "b": 7,
+        "difficulty": "3",
+        "corr_answer": 9.5
+    },
+    {
+        "": "64",
+        "patient #": "64",
+        "formula": "a",
+        "a": 5,
+        "b": 10,
+        "difficulty": "0",
+        "corr_answer": 5.0
+    },
+    {
+        "": "65",
+        "patient #": "65",
+        "formula": "-a/4 + b",
+        "a": 8,
+        "b": 9,
+        "difficulty": "3",
+        "corr_answer": 7.0
+    },
+    {
+        "": "66",
+        "patient #": "66",
+        "formula": "a",
+        "a": 4,
+        "b": 8,
+        "difficulty": "0",
+        "corr_answer": 4.0
+    },
+    {
+        "": "67",
+        "patient #": "67",
+        "formula": "-a/4 + b",
+        "a": 3,
+        "b": 10,
+        "difficulty": "4",
+        "corr_answer": 9.25
+    },
+    {
+        "": "68",
+        "patient #": "68",
+        "formula": "a + b/2",
+        "a": 4,
+        "b": 6,
+        "difficulty": "2",
+        "corr_answer": 7.0
+    },
+    {
+        "": "69",
+        "patient #": "69",
+        "formula": "a + b",
+        "a": 1,
+        "b": 4,
+        "difficulty": "1",
+        "corr_answer": 5.0
+    },
+    {
+        "": "70",
+        "patient #": "70",
+        "formula": "a + b",
+        "a": 4,
+        "b": 7,
+        "difficulty": "1",
+        "corr_answer": 11.0
+    },
+    {
+        "": "71",
+        "patient #": "71",
+        "formula": "a",
+        "a": 5,
+        "b": 9,
+        "difficulty": "0",
+        "corr_answer": 5.0
+    },
+    {
+        "": "72",
+        "patient #": "72",
+        "formula": "a + b",
+        "a": 6,
+        "b": 2,
+        "difficulty": "1",
+        "corr_answer": 8.0
+    },
+    {
+        "": "73",
+        "patient #": "73",
+        "formula": "-a/4 + b",
+        "a": 1,
+        "b": 5,
+        "difficulty": "4",
+        "corr_answer": 4.75
+    },
+    {
+        "": "74",
+        "patient #": "74",
+        "formula": "a",
+        "a": 5,
+        "b": 5,
+        "difficulty": "0",
+        "corr_answer": 5.0
+    },
+    {
+        "": "75",
+        "patient #": "75",
+        "formula": "a + b",
+        "a": 3,
+        "b": 9,
+        "difficulty": "1",
+        "corr_answer": 12.0
+    },
+    {
+        "": "76",
+        "patient #": "76",
+        "formula": "a",
+        "a": 2,
+        "b": 7,
+        "difficulty": "0",
+        "corr_answer": 2.0
+    },
+    {
+        "": "77",
+        "patient #": "77",
+        "formula": "a + b",
+        "a": 5,
+        "b": 6,
+        "difficulty": "1",
+        "corr_answer": 11.0
+    },
+    {
+        "": "78",
+        "patient #": "78",
+        "formula": "a",
+        "a": 4,
+        "b": 3,
+        "difficulty": "0",
+        "corr_answer": 4.0
+    },
+    {
+        "": "79",
+        "patient #": "79",
+        "formula": "a + b",
+        "a": 1,
+        "b": 2,
+        "difficulty": "1",
+        "corr_answer": 3.0
+    },
+    {
+        "": "80",
+        "patient #": "80",
+        "formula": "a/2",
+        "a": 4,
+        "b": 10,
+        "difficulty": "1",
+        "corr_answer": 2.0
+    },
+    {
+        "": "81",
+        "patient #": "81",
+        "formula": "a/2",
+        "a": 1,
+        "b": 4,
+        "difficulty": "2",
+        "corr_answer": 0.5
+    },
+    {
+        "": "82",
+        "patient #": "82",
+        "formula": "-a/4 + b",
+        "a": 3,
+        "b": 4,
+        "difficulty": "4",
+        "corr_answer": 3.25
+    },
+    {
+        "": "83",
+        "patient #": "83",
+        "formula": "a + b/2",
+        "a": 5,
+        "b": 8,
+        "difficulty": "2",
+        "corr_answer": 9.0
+    },
+    {
+        "": "84",
+        "patient #": "84",
+        "formula": "a/2",
+        "a": 5,
+        "b": 9,
+        "difficulty": "2",
+        "corr_answer": 2.5
+    },
+    {
+        "": "85",
+        "patient #": "85",
+        "formula": "a/2",
+        "a": 1,
+        "b": 4,
+        "difficulty": "2",
+        "corr_answer": 0.5
+    },
+    {
+        "": "86",
+        "patient #": "86",
+        "formula": "a",
+        "a": 3,
+        "b": 10,
+        "difficulty": "0",
+        "corr_answer": 3.0
+    },
+    {
+        "": "87",
+        "patient #": "87",
+        "formula": "a + b",
+        "a": 3,
+        "b": 3,
+        "difficulty": "1",
+        "corr_answer": 6.0
+    },
+    {
+        "": "88",
+        "patient #": "88",
+        "formula": "-a/4 + b",
+        "a": 7,
+        "b": 6,
+        "difficulty": "4",
+        "corr_answer": 4.25
+    },
+    {
+        "": "89",
+        "patient #": "89",
+        "formula": "a + b/2",
+        "a": 5,
+        "b": 3,
+        "difficulty": "3",
+        "corr_answer": 6.5
+    },
+    {
+        "": "90",
+        "patient #": "90",
+        "formula": "a + b",
+        "a": 8,
+        "b": 6,
+        "difficulty": "1",
+        "corr_answer": 14.0
+    },
+    {
+        "": "91",
+        "patient #": "91",
+        "formula": "a/2",
+        "a": 5,
+        "b": 2,
+        "difficulty": "2",
+        "corr_answer": 2.5
+    },
+    {
+        "": "92",
+        "patient #": "92",
+        "formula": "a + b/2",
+        "a": 5,
+        "b": 6,
+        "difficulty": "2",
+        "corr_answer": 8.0
+    },
+    {
+        "": "93",
+        "patient #": "93",
+        "formula": "-a/4 + b",
+        "a": 8,
+        "b": 2,
+        "difficulty": "3",
+        "corr_answer": 0.0
+    },
+    {
+        "": "94",
+        "patient #": "94",
+        "formula": "a + b/2",
+        "a": 1,
+        "b": 8,
+        "difficulty": "2",
+        "corr_answer": 5.0
+    },
+    {
+        "": "95",
+        "patient #": "95",
+        "formula": "a + b",
+        "a": 4,
+        "b": 9,
+        "difficulty": "1",
+        "corr_answer": 13.0
+    },
+    {
+        "": "96",
+        "patient #": "96",
+        "formula": "a + b/2",
+        "a": 2,
+        "b": 9,
+        "difficulty": "3",
+        "corr_answer": 6.5
+    },
+    {
+        "": "97",
+        "patient #": "97",
+        "formula": "a + b/2",
+        "a": 7,
+        "b": 6,
+        "difficulty": "2",
+        "corr_answer": 10.0
+    },
+    {
+        "": "98",
+        "patient #": "98",
+        "formula": "a/2",
+        "a": 4,
+        "b": 4,
+        "difficulty": "1",
+        "corr_answer": 2.0
+    },
+    {
+        "": "99",
+        "patient #": "99",
+        "formula": "a/2",
+        "a": 8,
+        "b": 10,
+        "difficulty": "1",
+        "corr_answer": 4.0
+    }
+]

@@ -1,0 +1,1150 @@
+[
+    {
+        "": "0",
+        "patient #": "0",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fatigue",
+            "cough"
+        ]
+    },
+    {
+        "": "1",
+        "patient #": "1",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "rapid heart rate",
+            "short breath",
+            "dizziness"
+        ]
+    },
+    {
+        "": "2",
+        "patient #": "2",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "trouble walking",
+            "dizziness",
+            "numbness or weakness"
+        ]
+    },
+    {
+        "": "3",
+        "patient #": "3",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "short breath",
+            "dizziness",
+            "fatigue"
+        ]
+    },
+    {
+        "": "4",
+        "patient #": "4",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "short breath",
+            "chills"
+        ]
+    },
+    {
+        "": "5",
+        "patient #": "5",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "numbness or weakness",
+            "trouble walking",
+            "dizziness"
+        ]
+    },
+    {
+        "": "6",
+        "patient #": "6",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "dizziness",
+            "rapid heart rate"
+        ]
+    },
+    {
+        "": "7",
+        "patient #": "7",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fever",
+            "cough",
+            "short breath"
+        ]
+    },
+    {
+        "": "8",
+        "patient #": "8",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "swellings",
+            "fatigue",
+            "fever"
+        ]
+    },
+    {
+        "": "9",
+        "patient #": "9",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fatigue",
+            "swellings"
+        ]
+    },
+    {
+        "": "10",
+        "patient #": "10",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "swellings",
+            "fever"
+        ]
+    },
+    {
+        "": "11",
+        "patient #": "11",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "cough",
+            "chills",
+            "short breath"
+        ]
+    },
+    {
+        "": "12",
+        "patient #": "12",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "numbness or weakness",
+            "trouble speaking"
+        ]
+    },
+    {
+        "": "13",
+        "patient #": "13",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "swellings",
+            "cough",
+            "fatigue"
+        ]
+    },
+    {
+        "": "14",
+        "patient #": "14",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fatigue",
+            "swellings"
+        ]
+    },
+    {
+        "": "15",
+        "patient #": "15",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "dizziness",
+            "chest pain"
+        ]
+    },
+    {
+        "": "16",
+        "patient #": "16",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "cough",
+            "fever"
+        ]
+    },
+    {
+        "": "17",
+        "patient #": "17",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "numbness or weakness",
+            "dizziness"
+        ]
+    },
+    {
+        "": "18",
+        "patient #": "18",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "cough",
+            "fever",
+            "short breath"
+        ]
+    },
+    {
+        "": "19",
+        "patient #": "19",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "short breath",
+            "fever",
+            "cough"
+        ]
+    },
+    {
+        "": "20",
+        "patient #": "20",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fever",
+            "short breath"
+        ]
+    },
+    {
+        "": "21",
+        "patient #": "21",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "chest pain",
+            "fatigue",
+            "short breath"
+        ]
+    },
+    {
+        "": "22",
+        "patient #": "22",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "short breath",
+            "cough"
+        ]
+    },
+    {
+        "": "23",
+        "patient #": "23",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "rapid heart rate",
+            "fatigue"
+        ]
+    },
+    {
+        "": "24",
+        "patient #": "24",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "short breath",
+            "cough",
+            "fever"
+        ]
+    },
+    {
+        "": "25",
+        "patient #": "25",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "chest pain",
+            "fatigue"
+        ]
+    },
+    {
+        "": "26",
+        "patient #": "26",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "short breath",
+            "fever"
+        ]
+    },
+    {
+        "": "27",
+        "patient #": "27",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "numbness or weakness",
+            "trouble speaking"
+        ]
+    },
+    {
+        "": "28",
+        "patient #": "28",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fatigue",
+            "short breath"
+        ]
+    },
+    {
+        "": "29",
+        "patient #": "29",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "dizziness",
+            "short breath",
+            "rapid heart rate"
+        ]
+    },
+    {
+        "": "30",
+        "patient #": "30",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "dizziness",
+            "chest pain"
+        ]
+    },
+    {
+        "": "31",
+        "patient #": "31",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "swellings",
+            "cough",
+            "fever"
+        ]
+    },
+    {
+        "": "32",
+        "patient #": "32",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "short breath",
+            "cough"
+        ]
+    },
+    {
+        "": "33",
+        "patient #": "33",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "swellings",
+            "fever"
+        ]
+    },
+    {
+        "": "34",
+        "patient #": "34",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "swellings",
+            "fever"
+        ]
+    },
+    {
+        "": "35",
+        "patient #": "35",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "trouble speaking",
+            "trouble walking",
+            "dizziness"
+        ]
+    },
+    {
+        "": "36",
+        "patient #": "36",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fatigue",
+            "fever"
+        ]
+    },
+    {
+        "": "37",
+        "patient #": "37",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "short breath",
+            "chills"
+        ]
+    },
+    {
+        "": "38",
+        "patient #": "38",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "swellings",
+            "cough"
+        ]
+    },
+    {
+        "": "39",
+        "patient #": "39",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fever",
+            "short breath",
+            "chills"
+        ]
+    },
+    {
+        "": "40",
+        "patient #": "40",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "short breath",
+            "cough"
+        ]
+    },
+    {
+        "": "41",
+        "patient #": "41",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fever",
+            "cough"
+        ]
+    },
+    {
+        "": "42",
+        "patient #": "42",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "dizziness",
+            "short breath"
+        ]
+    },
+    {
+        "": "43",
+        "patient #": "43",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "swellings",
+            "fatigue",
+            "cough"
+        ]
+    },
+    {
+        "": "44",
+        "patient #": "44",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "cough",
+            "chills"
+        ]
+    },
+    {
+        "": "45",
+        "patient #": "45",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "short breath",
+            "dizziness",
+            "rapid heart rate"
+        ]
+    },
+    {
+        "": "46",
+        "patient #": "46",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fatigue",
+            "chest pain"
+        ]
+    },
+    {
+        "": "47",
+        "patient #": "47",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fatigue",
+            "chest pain",
+            "short breath"
+        ]
+    },
+    {
+        "": "48",
+        "patient #": "48",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "cough",
+            "chills",
+            "fever"
+        ]
+    },
+    {
+        "": "49",
+        "patient #": "49",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "chest pain",
+            "dizziness",
+            "fatigue"
+        ]
+    },
+    {
+        "": "50",
+        "patient #": "50",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fatigue",
+            "fever",
+            "swellings"
+        ]
+    },
+    {
+        "": "51",
+        "patient #": "51",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "trouble speaking",
+            "trouble walking",
+            "numbness or weakness"
+        ]
+    },
+    {
+        "": "52",
+        "patient #": "52",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "cough",
+            "chills",
+            "fever"
+        ]
+    },
+    {
+        "": "53",
+        "patient #": "53",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "rapid heart rate",
+            "chest pain"
+        ]
+    },
+    {
+        "": "54",
+        "patient #": "54",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fatigue",
+            "rapid heart rate",
+            "short breath"
+        ]
+    },
+    {
+        "": "55",
+        "patient #": "55",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "chills",
+            "short breath"
+        ]
+    },
+    {
+        "": "56",
+        "patient #": "56",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "dizziness",
+            "trouble walking",
+            "numbness or weakness"
+        ]
+    },
+    {
+        "": "57",
+        "patient #": "57",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "cough",
+            "fatigue",
+            "fever"
+        ]
+    },
+    {
+        "": "58",
+        "patient #": "58",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "cough",
+            "fever",
+            "chills"
+        ]
+    },
+    {
+        "": "59",
+        "patient #": "59",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "short breath",
+            "chest pain",
+            "dizziness"
+        ]
+    },
+    {
+        "": "60",
+        "patient #": "60",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "swellings",
+            "fatigue",
+            "fever"
+        ]
+    },
+    {
+        "": "61",
+        "patient #": "61",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "numbness or weakness",
+            "trouble speaking"
+        ]
+    },
+    {
+        "": "62",
+        "patient #": "62",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fatigue",
+            "short breath",
+            "dizziness"
+        ]
+    },
+    {
+        "": "63",
+        "patient #": "63",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "short breath",
+            "fever"
+        ]
+    },
+    {
+        "": "64",
+        "patient #": "64",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "chest pain",
+            "fatigue",
+            "dizziness"
+        ]
+    },
+    {
+        "": "65",
+        "patient #": "65",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fatigue",
+            "cough"
+        ]
+    },
+    {
+        "": "66",
+        "patient #": "66",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "trouble walking",
+            "numbness or weakness",
+            "trouble speaking"
+        ]
+    },
+    {
+        "": "67",
+        "patient #": "67",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "cough",
+            "chills"
+        ]
+    },
+    {
+        "": "68",
+        "patient #": "68",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "dizziness",
+            "trouble speaking"
+        ]
+    },
+    {
+        "": "69",
+        "patient #": "69",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "cough",
+            "chills",
+            "short breath"
+        ]
+    },
+    {
+        "": "70",
+        "patient #": "70",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fatigue",
+            "swellings",
+            "fever"
+        ]
+    },
+    {
+        "": "71",
+        "patient #": "71",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "chest pain",
+            "dizziness"
+        ]
+    },
+    {
+        "": "72",
+        "patient #": "72",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "rapid heart rate",
+            "dizziness",
+            "short breath"
+        ]
+    },
+    {
+        "": "73",
+        "patient #": "73",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "short breath",
+            "cough",
+            "chills"
+        ]
+    },
+    {
+        "": "74",
+        "patient #": "74",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "trouble speaking",
+            "dizziness"
+        ]
+    },
+    {
+        "": "75",
+        "patient #": "75",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "cough",
+            "chills"
+        ]
+    },
+    {
+        "": "76",
+        "patient #": "76",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "cough",
+            "fever",
+            "swellings"
+        ]
+    },
+    {
+        "": "77",
+        "patient #": "77",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "rapid heart rate",
+            "chest pain",
+            "fatigue"
+        ]
+    },
+    {
+        "": "78",
+        "patient #": "78",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "dizziness",
+            "numbness or weakness"
+        ]
+    },
+    {
+        "": "79",
+        "patient #": "79",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "dizziness",
+            "numbness or weakness"
+        ]
+    },
+    {
+        "": "80",
+        "patient #": "80",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fatigue",
+            "dizziness",
+            "rapid heart rate"
+        ]
+    },
+    {
+        "": "81",
+        "patient #": "81",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "cough",
+            "fatigue",
+            "swellings"
+        ]
+    },
+    {
+        "": "82",
+        "patient #": "82",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "trouble walking",
+            "trouble speaking",
+            "dizziness"
+        ]
+    },
+    {
+        "": "83",
+        "patient #": "83",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "short breath",
+            "cough"
+        ]
+    },
+    {
+        "": "84",
+        "patient #": "84",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "trouble walking",
+            "numbness or weakness"
+        ]
+    },
+    {
+        "": "85",
+        "patient #": "85",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "short breath",
+            "fever"
+        ]
+    },
+    {
+        "": "86",
+        "patient #": "86",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "trouble speaking",
+            "numbness or weakness"
+        ]
+    },
+    {
+        "": "87",
+        "patient #": "87",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "trouble speaking",
+            "numbness or weakness",
+            "dizziness"
+        ]
+    },
+    {
+        "": "88",
+        "patient #": "88",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "chest pain",
+            "rapid heart rate"
+        ]
+    },
+    {
+        "": "89",
+        "patient #": "89",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "swellings",
+            "cough"
+        ]
+    },
+    {
+        "": "90",
+        "patient #": "90",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fatigue",
+            "rapid heart rate",
+            "dizziness"
+        ]
+    },
+    {
+        "": "91",
+        "patient #": "91",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "fever",
+            "short breath",
+            "cough"
+        ]
+    },
+    {
+        "": "92",
+        "patient #": "92",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "trouble speaking",
+            "dizziness",
+            "trouble walking"
+        ]
+    },
+    {
+        "": "93",
+        "patient #": "93",
+        "corr diagnosis": "Cardiac Arrest",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "chest pain",
+            "short breath"
+        ]
+    },
+    {
+        "": "94",
+        "patient #": "94",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "trouble walking",
+            "trouble speaking"
+        ]
+    },
+    {
+        "": "95",
+        "patient #": "95",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "cough",
+            "short breath"
+        ]
+    },
+    {
+        "": "96",
+        "patient #": "96",
+        "corr diagnosis": "Pneumonia",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "fever",
+            "chills"
+        ]
+    },
+    {
+        "": "97",
+        "patient #": "97",
+        "corr diagnosis": "Stroke",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "trouble speaking",
+            "trouble walking",
+            "numbness or weakness"
+        ]
+    },
+    {
+        "": "98",
+        "patient #": "98",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "1",
+        "symptoms": [
+            "swellings",
+            "fever",
+            "cough"
+        ]
+    },
+    {
+        "": "99",
+        "patient #": "99",
+        "corr diagnosis": "Tuberculosis",
+        "SJ/MJ": "MJ",
+        "difficulty": "0",
+        "symptoms": [
+            "cough",
+            "fatigue"
+        ]
+    }
+]

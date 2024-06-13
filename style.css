@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #023382;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+}
+
+header p {
+    margin-top: 5px;
+    color: #fff;
+}
+
+.main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+footer {
+    background-color:#023382;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+button {
+    background-color: #BCBCBC;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #D8E5FA;
+}
+
+.game-over-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.restart-button-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.restart-button-btn:hover {
+    background-color: #D8E5FA;
+}
+
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%; /* Make the table width 100% of its container */
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 1px 1px 12px rgba(0,0,0,0.2);
+}
+
+table th,
+table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+table th {
+    background-color: #004d99;
+    color: white;
+}
+
+/* Centering the table and adding visual enhancements */
+.disease-chart {
+    overflow-x: auto;
+}
+
+.choices {
+    margin-top: 20px;
+}
+
+#game-status {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-bottom: 2px solid #ccc;
+}
+
+#score, #timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#score {
+    margin-right: 20px; /* Adjust spacing between score and timer */
+}
+.break-timer {
+    font-size: 24px;
+    color: #d9534f;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#finish-game-btn {
+    display: block; /* Ensures the button takes the full line */
+    width: 80%; /* Adjusts the width to fit within a specific portion of the container */
+    margin: 20px auto; /* Centers the button horizontally and adds space above and below */
+    padding: 10px 0; /* Gives some height to the button for better clickability */
+    background-color: #007BFF; /* Sets a blue background color */
+    color: white; /* Sets the text color to white */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounds the corners of the button */
+    font-size: 16px; /* Sets the text size */
+    cursor: pointer; /* Changes the mouse cursor to a pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+  }
+
+  #finish-game-btn:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover for better user feedback */
+  }
+
