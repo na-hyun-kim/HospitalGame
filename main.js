@@ -12,7 +12,7 @@ let scored = true
 let inDiagnosis = false
 let secondsLate = 0
 let cumulativeDayStats = []
-let data = {actions: []}
+let playerActions = ""
 let breakTimerStatus = ""
 
 //use this structure to store the names and symptoms of diagnoses if we want to use them anywhere
@@ -30,6 +30,7 @@ let GameConfig = {
     MainJob: [[3, 3], [2, 3], [1, 1]],
     //same dimensions as main job, first shift should be 0
     Telemedicine: [[0, 2], [0, 2], [0, 0]],
+    NumberSearch: [[0, 2], [0, 2], [0, 0]],
     //same length as # of days
     SurpriseVisits: [true, false, false],
     BreakLength: 10,
@@ -2090,6 +2091,128 @@ let formula_json = [
     }
 ]   
 
+let number_search_json = [
+    {
+        "": "0",
+        "NS_number": "0",
+        "NS_image": "https://www.dropbox.com/scl/fi/9jdxjtdyrk8md8e1f0f5q/table0.png?rlkey=imzoioqbf3d6lxf072gm4m1a5&st=pk5thnlw&dl=0",
+        "number_to_search_for": 7,
+        "difficulty": 1,
+        "correct_answer": 3.0
+    },
+    {
+        "": "1",
+        "NS_number": "1",
+        "NS_image": "https://www.dropbox.com/scl/fi/638ssf6y61qx5qj8fmox5/table1.png?rlkey=orr139jmsws2z5dt39ispxe1w&st=ppj8mxra&dl=0",
+        "number_to_search_for": 6,
+        "difficulty": 0,
+        "correct_answer": 1.0
+    },
+    {
+        "": "2",
+        "NS_number": "2",
+        "NS_image": "https://www.dropbox.com/scl/fi/aqjaqx45ivgvl4nkcog5y/table2.png?rlkey=qwc06w0cli1lzobb3564znta9&st=5vlv3oq1&dl=0",
+        "number_to_search_for": 1,
+        "difficulty": 1,
+        "correct_answer": 1.0
+    },
+    {
+        "": "3",
+        "NS_number": "3",
+        "NS_image": "https://www.dropbox.com/scl/fi/vn7ldbqkt8se5p7nlvlee/table3.png?rlkey=fvvqufmdyf41wp47jlaf4pwex&st=ctxi9lys&dl=0",
+        "number_to_search_for": 6,
+        "difficulty": 0,
+        "correct_answer": 1.0
+    },
+    {
+        "": "4",
+        "NS_number": "4",
+        "NS_image": "https://www.dropbox.com/scl/fi/s29mby4ignatwq0b9zajg/table4.png?rlkey=dq0ouqw6rb21u1pb13yvicot6&st=ekpg64kz&dl=0",
+        "number_to_search_for": 6,
+        "difficulty": 2,
+        "correct_answer": 8.0
+    },
+    {
+        "": "5",
+        "NS_number": "5",
+        "NS_image": "https://www.dropbox.com/scl/fi/fkqfrkbhjai700gaihrhq/table5.png?rlkey=2dskja0yy46z89aaa0g92znss&st=jhl6fuoo&dl=0",
+        "number_to_search_for": 2,
+        "difficulty": 1,
+        "correct_answer": 2.0
+    },
+    {
+        "": "6",
+        "NS_number": "6",
+        "NS_image": "https://www.dropbox.com/scl/fi/0gvo6m7uc21nsvu5mhl1b/table6.png?rlkey=py8qwiamct5cuvu205hfg7uqd&st=p4j82ipx&dl=0",
+        "number_to_search_for": 8,
+        "difficulty": 1,
+        "correct_answer": 2.0
+    },
+    {
+        "": "7",
+        "NS_number": "7",
+        "NS_image": "https://www.dropbox.com/scl/fi/1hht0qjl0wpbkkylfyrvx/table7.png?rlkey=cwm3yqiwmtp5fu1qh4mcse519&st=f4sh76q2&dl=0",
+        "number_to_search_for": 4,
+        "difficulty": 0,
+        "correct_answer": 0.0
+    },
+    {
+        "": "8",
+        "NS_number": "8",
+        "NS_image": "https://www.dropbox.com/scl/fi/x7swp4bho7e3hsr2pi4hk/table8.png?rlkey=abt8sf1sgppuagtja6waft97d&st=5ix95r2x&dl=0",
+        "number_to_search_for": 3,
+        "difficulty": 0,
+        "correct_answer": 2.0
+    },
+    {
+        "": "9",
+        "NS_number": "9",
+        "NS_image": "https://www.dropbox.com/scl/fi/jh50l681ifgq2pgh4ljtl/table9.png?rlkey=72k87r98kvoozwyg023853bk3&st=u4t8d6jg&dl=0",
+        "number_to_search_for": 7,
+        "difficulty": 0,
+        "correct_answer": 0.0
+    },
+    {
+        "": "10",
+        "NS_number": "10",
+        "NS_image": "https://www.dropbox.com/scl/fi/j1d9oavufiucja5tv2z58/table10.png?rlkey=l5tcr4kacb6tnk0brgkvcbyqg&st=qvci1uof&dl=0",
+        "number_to_search_for": 9,
+        "difficulty": 1,
+        "correct_answer": 1.0
+    },
+    {
+        "": "11",
+        "NS_number": "11",
+        "NS_image": "https://www.dropbox.com/scl/fi/j3zhbw3iz63h9by17ypn8/table11.png?rlkey=855ggaaumzmycemm26w9hm727&st=byac6f7j&dl=0",
+        "number_to_search_for": 9,
+        "difficulty": 1,
+        "correct_answer": 1.0
+    },
+    {
+        "": "12",
+        "NS_number": "12",
+        "NS_image": "https://www.dropbox.com/scl/fi/32gg14c0p964mfmub256s/table12.png?rlkey=4wttbui90nuynstmfnrmu58n0&st=1jvbhw94&dl=0",
+        "number_to_search_for": 9,
+        "difficulty": 0,
+        "correct_answer": 1.0
+    },
+    {
+        "": "13",
+        "NS_number": "13",
+        "NS_image": "https://www.dropbox.com/scl/fi/q2hz4owsw4836i5nav0v6/table13.png?rlkey=oi9xwyofzo6nalplfx9g0rm9k&st=ow70q6ez&dl=0",
+        "number_to_search_for": 1,
+        "difficulty": 1,
+        "correct_answer": 2.0
+    },
+    {
+        "": "14",
+        "NS_number": "14",
+        "NS_image": "https://www.dropbox.com/scl/fi/ikw7edly2x53neowgq1v4/table14.png?rlkey=x4z2uxpwiayquxtypi1ujgyq3&st=nwlfdxs8&dl=0",
+        "number_to_search_for": 3,
+        "difficulty": 2,
+        "correct_answer": 9.0
+    }
+]
 
 let timeline = {
     Day: 0,
@@ -2099,7 +2222,13 @@ let timeline = {
 
 let mainPatientList = [patient_json, formula_json]
 let telemedicinePatientList = patient_json
-let queue = []
+let numberSearchPatientList = number_search_json
+let queues = {
+    "Main": [],
+    "Telemedicine": [],
+    "NumberSearch": [],
+    "DayBreak": [],
+}
 let currentPatient = null
 let currentJob = "Main"
 
@@ -2121,7 +2250,7 @@ function startBreakTimer(duration, callback) {
             }
         }
         if (--timer < 0) {
-            if (queue.length > 0 && inDiagnosis) {
+            if (queues[currentJob].length > 0 && inDiagnosis) {
                 //overtime!!
                 document.getElementById('break-timer').textContent = "Break over! You are " + minutes + ":" + seconds + " late";
                 breakTimerStatus = "late " + minutes + ":" + seconds
@@ -2169,17 +2298,18 @@ function surpriseVisit() {
     btn.textContent = "Answer?";
     btn.onclick = () => {
         scored = false
-        queue = []
+        clearQueues()
         queuePatients()
         nextPatient()
     };
     choicesContainer.appendChild(btn);
 }
 
-//use this function to add patients to the queue
+//use this function to add patients to the queues.
 let mainDiagnosisCounter = 0
 let mainFormulaCounter = 0
 let telemedicinePatientCounter = 0
+let numberSearchPatientCounter = 0
 
 function queuePatients() {
     if (currentJob == "Main") {
@@ -2188,31 +2318,42 @@ function queuePatients() {
             if ((mainFormulaCounter + mainDiagnosisCounter) % 3 == 2) {
                 let patient = mainPatientList[1][mainFormulaCounter]
                 patient.type = "formula"
-                queue.push(patient)
+                queues[currentJob].push(patient)
                 mainFormulaCounter += 1
             } else {
                 let patient = mainPatientList[0][mainDiagnosisCounter]
                 patient.type = "diagnosis"
-                queue.push(patient)
+                queues[currentJob].push(patient)
                 mainDiagnosisCounter += 1
             }
         }
     } else if (currentJob == "Telemedicine") {
         //side job
         for (let i=0; i<GameConfig.Telemedicine[timeline.Day][timeline.Shift]; i++) {
-            queue.push(telemedicinePatientList[telemedicinePatientCounter])
+            queues[currentJob].push(telemedicinePatientList[telemedicinePatientCounter])
             telemedicinePatientCounter += 1
+        }
+    } else if (currentJob == "NumberSearch") {
+        for (let i=0; i<GameConfig.NumberSearch[timeline.Day][timeline.Shift]; i++) {
+            queues[currentJob].push(numberSearchPatientList[numberSearchPatientCounter])
+            numberSearchPatientCounter += 1
         }
     } else {
         //surprise visits
-        queue.push(mainPatientList[0][mainDiagnosisCounter])
+        queues[currentJob].push(mainPatientList[0][mainDiagnosisCounter])
         mainDiagnosisCounter += 1
     }
 }
 
+function clearQueues() {
+    for (const key in queues) {
+        queues[key] = []
+    }
+}
+
 function nextPatient() {
-    if (queue.length == 0) {
-        //if queue becomes empty, start a break
+    if (queues[currentJob].length == 0) {
+        //if queues becomes empty, start a break
         if (currentJob == "Main") {
             startBreak()
         } else {
@@ -2221,12 +2362,19 @@ function nextPatient() {
         return
     }
     inDiagnosis = true
-    currentPatient = queue[0]
+    currentPatient = queues[currentJob][0]
     if (currentPatient.type == "formula") {
         sliderPatient()
+    } else if (currentPatient.type == "numberSearch") {
+        numberSearchPatient()
     } else {
         diagnosePatient()
     }
+}
+
+function numberSearchPatient() {
+    document.getElementById('scene-title').textContent = "Number Search " + currentPatient["NS_number"];
+    document.getElementById('scene-story').textContent = "Find the ";
 }
 
 function sliderPatient() {
@@ -2234,7 +2382,7 @@ function sliderPatient() {
     document.getElementById('scene-title').textContent = "Patient " + currentPatient["patient #"];
     document.getElementById('scene-story').textContent = "Solve for x = " + currentPatient["formula"] + ", where a=" + currentPatient["a"] + ", b=" + currentPatient["b"];
     document.getElementById('patients-left').classList.remove("hidden")
-    document.getElementById('patients-left').textContent = "Patients left: " + queue.length
+    document.getElementById('patients-left').textContent = "Patients left: " + queues[currentJob].length
     let answeredValue = false
     let answerInput = document.getElementById('formulaInput');
     answerInput.disabled = false
@@ -2284,7 +2432,7 @@ function diagnosePatient() {
     document.getElementById('scene-title').textContent = "Patient " + currentPatient["patient #"];
     document.getElementById('scene-story').textContent = "This patient is experiencing the symptoms: " + symptomsStr + ". What is your diagnosis?";
     document.getElementById('patients-left').classList.remove("hidden")
-    document.getElementById('patients-left').textContent = "Patients left: " + queue.length
+    document.getElementById('patients-left').textContent = "Patients left: " + queues[currentJob].length
     //add choices
     let choicesContainer = document.getElementById('choices');
     choicesContainer.innerHTML = ''; // Clear previous choices
@@ -2347,7 +2495,7 @@ function correct() {
     let btn = document.createElement('button');
     btn.textContent = "Next";
     btn.onclick = () => {
-        queue = queue.slice(1)
+        queues[currentJob] = queues[currentJob].slice(1)
         nextPatient()
     };
     choicesContainer.appendChild(btn);
@@ -2372,7 +2520,7 @@ function wrong() {
     let btn = document.createElement('button');
     btn.textContent = "Next";
     btn.onclick = () => {
-        queue = queue.slice(1)
+        queues[currentJob] = queues[currentJob].slice(1)
         nextPatient()
     };
     choicesContainer.appendChild(btn);
@@ -2380,7 +2528,7 @@ function wrong() {
 
 function skipPatient() {
     //put any other functionality we may want to add for skipping here (like showing text)
-    queue = queue.slice(1)
+    queues[currentJob] = queues[currentJob].slice(1)
     timeline.Patient += 1
     //diagnose the next patient
     nextPatient()
@@ -2388,7 +2536,7 @@ function skipPatient() {
 
 function startMainJob() {
     scored = true
-    queue = []
+    clearQueues()
     currentJob = "Main"
     queuePatients()
     nextPatient()
@@ -2397,9 +2545,14 @@ function startMainJob() {
 function startTelemedicine() {
     scored = true
     currentJob = "Telemedicine"
-    queue = []
     queuePatients()
     //do not diagnose beacuse user needs to opt in
+}
+
+function startNumberSearch() {
+    scored = true
+    currentJob = "NumberSearch"
+    queuePatients()
 }
 
 function startBreak() {
@@ -2412,9 +2565,10 @@ function startBreak() {
         return
     }
     startBreakTimer(GameConfig.BreakLength, endBreak)
-
-    //queue patients for telemedicine
+    clearQueues()
+    //queues patients for telemedicine and number search
     startTelemedicine()
+    startNumberSearch()
     breakRoom()
 }
 
@@ -2449,6 +2603,14 @@ function breakRoom() {
             let btn = document.createElement('button');
             btn.textContent = "Work on Telemedicine";
             btn.onclick = () => {
+                currentJob = "Telemedicine"
+                nextPatient()
+            };
+            choicesContainer.appendChild(btn);
+            btn = document.createElement('button');
+            btn.textContent = "Work on Number Search";
+            btn.onclick = () => {
+                currentJob = "NumberSearch"
                 nextPatient()
             };
             choicesContainer.appendChild(btn);
@@ -2547,20 +2709,20 @@ function gameOver() {
 };
 
 document.addEventListener('click', function(event) {
-    curData = {}
     if (event.target.tagName === 'BUTTON') {
         // logging player actions
-        curData["time"] = document.getElementById('timer').textContent.slice(6)
-        curData["name"] = event.target.textContent
-        curData["job"] = currentJob
-        curData["day"] = timeline.Day
-        curData["shift"] = timeline.Shift
-        curData["patient"] = timeline.Patient
-        curData["score"] = score
-        curData["break timer"] = breakTimerStatus
+        playerActions += document.getElementById('timer').textContent.slice(6) + " "
+        playerActions += event.target.textContent + " "
+        playerActions += currentJob + " "
+        playerActions += timeline.Day + " "
+        playerActions += timeline.Shift + " "
+        playerActions += timeline.Patient + " "
+        playerActions += score + " "
+        playerActions += breakTimerStatus + " "
+        playerActions += ";"
         //add anymore information we want to obtain here
 
-        data.actions.push(curData)
+        Qualtrics.SurveyEngine.setEmbeddedData('playerActions', playerActions);
     }
 });
 
