@@ -5,15 +5,21 @@
 let score = 0; // Initialize score
 let timerInterval; // Variable to hold timer interval
 let breakTimerInterval; // Variable to hold timer interval for breaks
-let totalPatientsDiagnosed = 0;
+let jobTimerInterval;
+let tasksCompleted = 0;
+let mainJobCount = 0;
 let telemedicineCount = 0; // Initialize at the top with other variables
+let numberSearchCount = 0;
+let surpriseVisitCount = 0;
 let playerStr = ""
 let scored = true
 let inDiagnosis = false
-let secondsLate = 0
+let totalSecondsLate = 0
+let mainJobSecondsLate = 0
 let cumulativeDayStats = []
 let playerActions = ""
 let breakTimerStatus = ""
+let mainJobTimerStatus = ""
 
 //use this structure to store the names and symptoms of diagnoses if we want to use them anywhere
 const chart = {
@@ -28,6 +34,7 @@ const chart = {
 let GameConfig = {
     //first dimension is day, second is shift, value is number of patients
     MainJob: [[3, 3], [2, 3], [1, 1]],
+    MainJobTimer: [[60, 60], [45, 60], [25, 25]],
     //same dimensions as main job, first shift should be 0
     Telemedicine: [[0, 2], [0, 2], [0, 0]],
     NumberSearch: [[0, 2], [0, 2], [0, 0]],
@@ -2095,7 +2102,7 @@ let number_search_json = [
     {
         "": "0",
         "NS_number": "0",
-        "NS_image": "https://www.dropbox.com/scl/fi/9jdxjtdyrk8md8e1f0f5q/table0.png?rlkey=imzoioqbf3d6lxf072gm4m1a5&st=pk5thnlw&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/9jdxjtdyrk8md8e1f0f5q/table0.png?rlkey=imzoioqbf3d6lxf072gm4m1a5&st=pk5thnlw&raw=1",
         "number_to_search_for": 7,
         "difficulty": 1,
         "correct_answer": 3.0
@@ -2103,7 +2110,7 @@ let number_search_json = [
     {
         "": "1",
         "NS_number": "1",
-        "NS_image": "https://www.dropbox.com/scl/fi/638ssf6y61qx5qj8fmox5/table1.png?rlkey=orr139jmsws2z5dt39ispxe1w&st=ppj8mxra&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/638ssf6y61qx5qj8fmox5/table1.png?rlkey=orr139jmsws2z5dt39ispxe1w&st=ppj8mxra&raw=1",
         "number_to_search_for": 6,
         "difficulty": 0,
         "correct_answer": 1.0
@@ -2111,7 +2118,7 @@ let number_search_json = [
     {
         "": "2",
         "NS_number": "2",
-        "NS_image": "https://www.dropbox.com/scl/fi/aqjaqx45ivgvl4nkcog5y/table2.png?rlkey=qwc06w0cli1lzobb3564znta9&st=5vlv3oq1&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/aqjaqx45ivgvl4nkcog5y/table2.png?rlkey=qwc06w0cli1lzobb3564znta9&st=5vlv3oq1&raw=1",
         "number_to_search_for": 1,
         "difficulty": 1,
         "correct_answer": 1.0
@@ -2119,7 +2126,7 @@ let number_search_json = [
     {
         "": "3",
         "NS_number": "3",
-        "NS_image": "https://www.dropbox.com/scl/fi/vn7ldbqkt8se5p7nlvlee/table3.png?rlkey=fvvqufmdyf41wp47jlaf4pwex&st=ctxi9lys&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/vn7ldbqkt8se5p7nlvlee/table3.png?rlkey=fvvqufmdyf41wp47jlaf4pwex&st=ctxi9lys&raw=1",
         "number_to_search_for": 6,
         "difficulty": 0,
         "correct_answer": 1.0
@@ -2127,7 +2134,7 @@ let number_search_json = [
     {
         "": "4",
         "NS_number": "4",
-        "NS_image": "https://www.dropbox.com/scl/fi/s29mby4ignatwq0b9zajg/table4.png?rlkey=dq0ouqw6rb21u1pb13yvicot6&st=ekpg64kz&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/s29mby4ignatwq0b9zajg/table4.png?rlkey=dq0ouqw6rb21u1pb13yvicot6&st=ekpg64kz&raw=1",
         "number_to_search_for": 6,
         "difficulty": 2,
         "correct_answer": 8.0
@@ -2135,7 +2142,7 @@ let number_search_json = [
     {
         "": "5",
         "NS_number": "5",
-        "NS_image": "https://www.dropbox.com/scl/fi/fkqfrkbhjai700gaihrhq/table5.png?rlkey=2dskja0yy46z89aaa0g92znss&st=jhl6fuoo&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/fkqfrkbhjai700gaihrhq/table5.png?rlkey=2dskja0yy46z89aaa0g92znss&st=jhl6fuoo&raw=1",
         "number_to_search_for": 2,
         "difficulty": 1,
         "correct_answer": 2.0
@@ -2143,7 +2150,7 @@ let number_search_json = [
     {
         "": "6",
         "NS_number": "6",
-        "NS_image": "https://www.dropbox.com/scl/fi/0gvo6m7uc21nsvu5mhl1b/table6.png?rlkey=py8qwiamct5cuvu205hfg7uqd&st=p4j82ipx&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/0gvo6m7uc21nsvu5mhl1b/table6.png?rlkey=py8qwiamct5cuvu205hfg7uqd&st=p4j82ipx&raw=1",
         "number_to_search_for": 8,
         "difficulty": 1,
         "correct_answer": 2.0
@@ -2151,7 +2158,7 @@ let number_search_json = [
     {
         "": "7",
         "NS_number": "7",
-        "NS_image": "https://www.dropbox.com/scl/fi/1hht0qjl0wpbkkylfyrvx/table7.png?rlkey=cwm3yqiwmtp5fu1qh4mcse519&st=f4sh76q2&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/1hht0qjl0wpbkkylfyrvx/table7.png?rlkey=cwm3yqiwmtp5fu1qh4mcse519&st=f4sh76q2&raw=1",
         "number_to_search_for": 4,
         "difficulty": 0,
         "correct_answer": 0.0
@@ -2159,7 +2166,7 @@ let number_search_json = [
     {
         "": "8",
         "NS_number": "8",
-        "NS_image": "https://www.dropbox.com/scl/fi/x7swp4bho7e3hsr2pi4hk/table8.png?rlkey=abt8sf1sgppuagtja6waft97d&st=5ix95r2x&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/x7swp4bho7e3hsr2pi4hk/table8.png?rlkey=abt8sf1sgppuagtja6waft97d&st=5ix95r2x&raw=1",
         "number_to_search_for": 3,
         "difficulty": 0,
         "correct_answer": 2.0
@@ -2167,7 +2174,7 @@ let number_search_json = [
     {
         "": "9",
         "NS_number": "9",
-        "NS_image": "https://www.dropbox.com/scl/fi/jh50l681ifgq2pgh4ljtl/table9.png?rlkey=72k87r98kvoozwyg023853bk3&st=u4t8d6jg&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/jh50l681ifgq2pgh4ljtl/table9.png?rlkey=72k87r98kvoozwyg023853bk3&st=u4t8d6jg&raw=1",
         "number_to_search_for": 7,
         "difficulty": 0,
         "correct_answer": 0.0
@@ -2175,7 +2182,7 @@ let number_search_json = [
     {
         "": "10",
         "NS_number": "10",
-        "NS_image": "https://www.dropbox.com/scl/fi/j1d9oavufiucja5tv2z58/table10.png?rlkey=l5tcr4kacb6tnk0brgkvcbyqg&st=qvci1uof&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/j1d9oavufiucja5tv2z58/table10.png?rlkey=l5tcr4kacb6tnk0brgkvcbyqg&st=qvci1uof&raw=1",
         "number_to_search_for": 9,
         "difficulty": 1,
         "correct_answer": 1.0
@@ -2183,7 +2190,7 @@ let number_search_json = [
     {
         "": "11",
         "NS_number": "11",
-        "NS_image": "https://www.dropbox.com/scl/fi/j3zhbw3iz63h9by17ypn8/table11.png?rlkey=855ggaaumzmycemm26w9hm727&st=byac6f7j&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/j3zhbw3iz63h9by17ypn8/table11.png?rlkey=855ggaaumzmycemm26w9hm727&st=byac6f7j&raw=1",
         "number_to_search_for": 9,
         "difficulty": 1,
         "correct_answer": 1.0
@@ -2191,7 +2198,7 @@ let number_search_json = [
     {
         "": "12",
         "NS_number": "12",
-        "NS_image": "https://www.dropbox.com/scl/fi/32gg14c0p964mfmub256s/table12.png?rlkey=4wttbui90nuynstmfnrmu58n0&st=1jvbhw94&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/32gg14c0p964mfmub256s/table12.png?rlkey=4wttbui90nuynstmfnrmu58n0&st=1jvbhw94&raw=1",
         "number_to_search_for": 9,
         "difficulty": 0,
         "correct_answer": 1.0
@@ -2199,7 +2206,7 @@ let number_search_json = [
     {
         "": "13",
         "NS_number": "13",
-        "NS_image": "https://www.dropbox.com/scl/fi/q2hz4owsw4836i5nav0v6/table13.png?rlkey=oi9xwyofzo6nalplfx9g0rm9k&st=ow70q6ez&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/q2hz4owsw4836i5nav0v6/table13.png?rlkey=oi9xwyofzo6nalplfx9g0rm9k&st=ow70q6ez&raw=1",
         "number_to_search_for": 1,
         "difficulty": 1,
         "correct_answer": 2.0
@@ -2207,7 +2214,7 @@ let number_search_json = [
     {
         "": "14",
         "NS_number": "14",
-        "NS_image": "https://www.dropbox.com/scl/fi/ikw7edly2x53neowgq1v4/table14.png?rlkey=x4z2uxpwiayquxtypi1ujgyq3&st=nwlfdxs8&dl=0",
+        "NS_image": "https://www.dropbox.com/scl/fi/ikw7edly2x53neowgq1v4/table14.png?rlkey=x4z2uxpwiayquxtypi1ujgyq3&st=nwlfdxs8&raw=1",
         "number_to_search_for": 3,
         "difficulty": 2,
         "correct_answer": 9.0
@@ -2254,7 +2261,7 @@ function startBreakTimer(duration, callback) {
                 //overtime!!
                 document.getElementById('break-timer').textContent = "Break over! You are " + minutes + ":" + seconds + " late";
                 breakTimerStatus = "late " + minutes + ":" + seconds
-                secondsLate += 1
+                totalSecondsLate += 1
             } else {
                 clearInterval(breakTimerInterval);
                 callback();
@@ -2270,6 +2277,36 @@ function stopBreakTimer() {
     clearInterval(breakTimerInterval);
     document.getElementById('break-timer').textContent = ''; // Clear timer text
     breakTimerStatus = ""
+}
+
+function startMainJobTimer(duration) {
+    let timer = duration, minutes, seconds;
+    jobTimerInterval = setInterval(function () {
+        minutes = parseInt(Math.abs(timer) / 60, 10);
+        seconds = parseInt(Math.abs(timer) % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        
+        if (--timer < 0) {
+            if (queues[currentJob].length > 0 && inDiagnosis) {
+                //overtime!!
+                document.getElementById('break-timer').textContent = "You are going overtime and losing break time! You are " + minutes + ":" + seconds + " late";
+                mainJobTimerStatus = "late " + minutes + ":" + seconds
+                totalSecondsLate += 1
+                mainJobSecondsLate += 1
+            }
+        } else {
+            document.getElementById('break-timer').textContent = "Main Job: " + minutes + ":" + seconds;
+            mainJobTimerStatus = minutes + ":" + seconds
+        }
+    }, 1000);
+}
+
+function stopMainJobTimer() {
+    clearInterval(jobTimerInterval);
+    document.getElementById('break-timer').textContent = ''; // Clear timer text
+    mainJobTimerStatus = ""
 }
 
 function startTimer() {
@@ -2330,12 +2367,16 @@ function queuePatients() {
     } else if (currentJob == "Telemedicine") {
         //side job
         for (let i=0; i<GameConfig.Telemedicine[timeline.Day][timeline.Shift]; i++) {
-            queues[currentJob].push(telemedicinePatientList[telemedicinePatientCounter])
+            let patient = telemedicinePatientList[telemedicinePatientCounter]
+            patient.type = "diagnosis"
+            queues[currentJob].push(patient)
             telemedicinePatientCounter += 1
         }
     } else if (currentJob == "NumberSearch") {
         for (let i=0; i<GameConfig.NumberSearch[timeline.Day][timeline.Shift]; i++) {
-            queues[currentJob].push(numberSearchPatientList[numberSearchPatientCounter])
+            let patient = numberSearchPatientList[numberSearchPatientCounter]
+            patient.type = "numberSearch"
+            queues[currentJob].push(patient)
             numberSearchPatientCounter += 1
         }
     } else {
@@ -2374,7 +2415,45 @@ function nextPatient() {
 
 function numberSearchPatient() {
     document.getElementById('scene-title').textContent = "Number Search " + currentPatient["NS_number"];
-    document.getElementById('scene-story').textContent = "Find the ";
+    document.getElementById('scene-story').textContent = "How many " + currentPatient["number_to_search_for"] + "'s do you see?";
+    
+    document.getElementById('number_img').src = currentPatient["NS_image"]
+    document.getElementById('number-container').classList.remove("hidden")
+    document.getElementById('patients-left').classList.remove("hidden")
+    document.getElementById('patients-left').textContent = "Patients left: " + queues[currentJob].length
+
+    let input = document.getElementById("imageInput")
+    let container = document.getElementById('choices');
+    container.innerHTML = ''; // Clear previous choices
+
+    let submitBtn = document.createElement('button');
+    submitBtn.textContent = 'Submit Answer';
+    submitBtn.onclick = function() {
+        if (parseFloat(input.value) == currentPatient["correct_answer"]) {
+            correct()
+        } else {
+            wrong()
+        }
+    };
+    container.appendChild(submitBtn);
+    //add option to skip or switch back to leisure if it is telemedicine
+    if (currentJob == "NumberSearch") {
+        let btn = document.createElement('button');
+        btn.textContent = "Skip";
+        btn.onclick = () => {
+            skipPatient()
+        };
+        container.appendChild(btn);
+
+        btn = document.createElement('button');
+        btn.textContent = "Back to Break";
+        btn.onclick = () => {
+            breakRoom()
+        };
+        container.appendChild(btn);
+    }
+    document.getElementById('game-view').classList.remove('hidden');
+    document.getElementById('start-button').classList.add('hidden');
 }
 
 function sliderPatient() {
@@ -2451,11 +2530,9 @@ function diagnosePatient() {
     
     //add option to skip or switch back to leisure if it is telemedicine
     if (currentJob == "Telemedicine") {
-        telemedicineCount += 1
         let btn = document.createElement('button');
         btn.textContent = "Skip";
         btn.onclick = () => {
-            telemedicineCount -= 1
             skipPatient()
         };
         choicesContainer.appendChild(btn);
@@ -2463,7 +2540,6 @@ function diagnosePatient() {
         btn = document.createElement('button');
         btn.textContent = "Back to Break";
         btn.onclick = () => {
-            telemedicineCount -= 1
             breakRoom()
         };
         choicesContainer.appendChild(btn);
@@ -2473,8 +2549,17 @@ function diagnosePatient() {
 }
 
 function correct() {
-    totalPatientsDiagnosed += 1;
-    document.getElementById('patient-counter').textContent = "Patients Diagnosed: " + totalPatientsDiagnosed
+    tasksCompleted += 1;
+    document.getElementById('patient-counter').textContent = "Tasks Completed: " + tasksCompleted
+    if (currentJob == "Main") {
+        mainJobCount += 1
+    } else if (currentJob == "Telemedicine") {
+        telemedicineCount += 1
+    } else if (currentJob == "NumberSearch") {
+        numberSearchCount += 1
+    } else if (currentJob == "DayBreak") {
+        surpriseVisitCount += 1
+    }
     if (scored) {
         score += 1
     }
@@ -2485,6 +2570,9 @@ function correct() {
         document.getElementById('scene-story').textContent = "The correct value is " + currentPatient["corr_answer"] + ".";
         document.getElementById('formula-container').classList.add('hidden');
         document.getElementById('slider-container').classList.add('hidden'); // Hide slider after submission
+    } else if (currentPatient.type == "numberSearch") {
+        document.getElementById('scene-story').textContent = "The correct amount of " + currentPatient["number_to_search_for"] + "'s is " + currentPatient["correct_answer"] + ".";
+        document.getElementById('number-container').classList.add('hidden');
     } else {
         document.getElementById('scene-story').textContent = "This patient exhibits symptoms for " + currentPatient["corr diagnosis"] + ". What would you like to next?"
     }
@@ -2502,8 +2590,17 @@ function correct() {
 }
 
 function wrong() {
-    totalPatientsDiagnosed += 1;
-    document.getElementById('patient-counter').textContent = "Patients Diagnosed: " + totalPatientsDiagnosed
+    tasksCompleted += 1;
+    document.getElementById('patient-counter').textContent = "Tasks Completed: " + tasksCompleted
+    if (currentJob == "Main") {
+        mainJobCount += 1
+    } else if (currentJob == "Telemedicine") {
+        telemedicineCount += 1
+    } else if (currentJob == "NumberSearch") {
+        numberSearchCount += 1
+    } else if (currentJob == "DayBreak") {
+        surpriseVisitCount += 1
+    }
     timeline.Patient += 1
     document.getElementById('score').textContent = 'Score: ' + score;
     document.getElementById('scene-title').textContent = "Incorrect!";
@@ -2511,6 +2608,9 @@ function wrong() {
         document.getElementById('scene-story').textContent = "Incorrect! The correct value is " + currentPatient["corr_answer"] + ".";
         document.getElementById('formula-container').classList.add('hidden');
         document.getElementById('slider-container').classList.add('hidden'); // Hide slider after submission
+    } else if (currentPatient.type == "numberSearch") {
+        document.getElementById('scene-story').textContent = "Incorrect! The correct amount of " + currentPatient["number_to_search_for"] + "'s is " + currentPatient["correct_answer"] + ".";
+        document.getElementById('number-container').classList.add('hidden');
     } else {
         document.getElementById('scene-story').textContent = "Incorrect! This patient exhibits symptoms for " + currentPatient["corr diagnosis"] + ". What would you like to next?"
     }
@@ -2539,6 +2639,7 @@ function startMainJob() {
     clearQueues()
     currentJob = "Main"
     queuePatients()
+    startMainJobTimer(GameConfig.MainJobTimer[timeline.Day][timeline.Shift])
     nextPatient()
 }
 
@@ -2559,12 +2660,15 @@ function startBreak() {
     inDiagnosis = false
     timeline.Patient = 0
     timeline.Shift += 1;
+    stopMainJobTimer()
     if (timeline.Shift >= GameConfig.MainJob[timeline.Day].length) {
         //end of day
         endDay()
         return
     }
-    startBreakTimer(GameConfig.BreakLength, endBreak)
+    
+    startBreakTimer(Math.max(GameConfig.BreakLength-mainJobSecondsLate, 0), endBreak)
+    mainJobSecondsLate = 0
     clearQueues()
     //queues patients for telemedicine and number search
     startTelemedicine()
@@ -2575,7 +2679,8 @@ function startBreak() {
 function endDay() {
     timeline.Shift = 0
     currentJob = "DayBreak"
-    startBreakTimer(GameConfig.DayBreakLength, endDayBreak)
+    startBreakTimer(GameConfig.DayBreakLength-mainJobSecondsLate, endDayBreak)
+    mainJobSecondsLate = 0
     breakRoom()
 }
 
@@ -2621,12 +2726,13 @@ function breakRoom() {
 function endDayBreak() {
     stopBreakTimer()
     timeline.Day += 1
+    playerActions = ""
     document.getElementById('day').textContent = "Day: " + (timeline.Day + 1)
     cumulativeDayStats.push({
         "Score": score,
-        "Patients seen": totalPatientsDiagnosed,
+        "Tasks Completed": tasksCompleted,
         "Telemedicine visits": telemedicineCount,
-        "Seconds late": secondsLate,
+        "Seconds late": totalSecondsLate,
     })
     document.getElementById('scene-title').textContent = "Day over!"
     document.getElementById('scene-story').textContent = "Your day is over. Here is a summary: "
@@ -2722,14 +2828,54 @@ document.addEventListener('click', function(event) {
         playerActions += ";"
         //add anymore information we want to obtain here
 
-        Qualtrics.SurveyEngine.setEmbeddedData('playerActions', playerActions);
+        
+        /*switch (timeline.Day) {
+            case 0:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions1', playerActions);
+                break;
+            case 1:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions2', playerActions);
+                break;
+            case 2:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions3', playerActions);
+                break;
+            case 3:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions4', playerActions);
+                break;
+            case 4:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions5', playerActions);
+                break;
+            case 5:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions6', playerActions);
+                break;
+            case 6:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions6', playerActions);
+                break;
+            case 7:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions7', playerActions);
+                break;
+            case 8:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions8', playerActions);
+                break;
+            case 9:
+                Qualtrics.SurveyEngine.setEmbeddedData('playerActions9', playerActions);
+                break;
+            default:
+                //do nothing
+                break;
+        }*/
+        
     }
 });
 
 function storeGameData() {
     /*Qualtrics.SurveyEngine.setEmbeddedData('gameDuration', document.getElementById('timer').textContent);
     Qualtrics.SurveyEngine.setEmbeddedData('finalScore', score);
-    Qualtrics.SurveyEngine.setEmbeddedData('telemedicineSessions', telemedicineCount);*/
+    Qualtrics.SurveyEngine.setEmbeddedData('telemedicineSessions', telemedicineCount);
+    Qualtrics.SurveyEngine.setEmbeddedData('numberSearchSessions', numberSearchCount);
+    Qualtrics.SurveyEngine.setEmbeddedData('surpriseVisits', surpriseVisitCount);
+    Qualtrics.SurveyEngine.setEmbeddedData('totalSecondsLate', totalSecondsLate);
+    */
 }
 /*
     function hideEl(element) {
