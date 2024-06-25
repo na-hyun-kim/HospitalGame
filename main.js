@@ -2688,6 +2688,7 @@ function endDay() {
 function breakRoom() {
     inDiagnosis = false
     document.getElementById('patients-left').classList.add("hidden")
+    document.getElementById('number-container').classList.add('hidden');
     if (currentJob == "DayBreak") {
         document.getElementById('scene-title').textContent = "Breakroom"
         document.getElementById('scene-story').textContent = "You've finished your shifts for the day! Take a break"
@@ -2772,6 +2773,7 @@ function endDayBreak() {
 
 function endBreak() {
     stopBreakTimer()
+    document.getElementById('number-container').classList.add('hidden');
     document.getElementById('scene-title').textContent = "Break over"
     document.getElementById('scene-story').textContent = "Your break is over. Time to get back to work!"
     let choicesContainer = document.getElementById('choices');
