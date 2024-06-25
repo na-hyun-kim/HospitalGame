@@ -20,6 +20,7 @@ let cumulativeDayStats = []
 let playerActions = ""
 let breakTimerStatus = ""
 let mainJobTimerStatus = ""
+let playerActions1 = "", playerActions2 = "", playerActions3 = "", playerActions4 = "", playerActions5 = "", playerActions6 = "", playerActions7 = "", playerActions8 = "", playerActions9 = "";
 
 //use this structure to store the names and symptoms of diagnoses if we want to use them anywhere
 const chart = {
@@ -2761,6 +2762,7 @@ function endDayBreak() {
         if (timeline.Day >= GameConfig.MainJob.length) {
             //end of game
             gameOver()
+            //Q.enableNextButton()
             return
         }
         startMainJob()
@@ -2829,41 +2831,38 @@ document.addEventListener('click', function(event) {
         //add anymore information we want to obtain here
 
         
-        /*switch (timeline.Day) {
+        switch (timeline.Day) {
             case 0:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions1', playerActions);
+                playerActions1 = playerActions
                 break;
             case 1:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions2', playerActions);
+                playerActions2 = playerActions
                 break;
             case 2:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions3', playerActions);
+                playerActions3 = playerActions
                 break;
             case 3:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions4', playerActions);
+                playerActions4 = playerActions
                 break;
             case 4:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions5', playerActions);
+                playerActions5 = playerActions
                 break;
             case 5:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions6', playerActions);
+                playerActions6 = playerActions
                 break;
             case 6:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions6', playerActions);
+                playerActions7 = playerActions
                 break;
             case 7:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions7', playerActions);
+                playerActions8 = playerActions
                 break;
             case 8:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions8', playerActions);
-                break;
-            case 9:
-                Qualtrics.SurveyEngine.setEmbeddedData('playerActions9', playerActions);
+                playerActions9 = playerActions
                 break;
             default:
                 //do nothing
                 break;
-        }*/
+        }
         
     }
 });
@@ -2875,6 +2874,15 @@ function storeGameData() {
     Qualtrics.SurveyEngine.setEmbeddedData('numberSearchSessions', numberSearchCount);
     Qualtrics.SurveyEngine.setEmbeddedData('surpriseVisits', surpriseVisitCount);
     Qualtrics.SurveyEngine.setEmbeddedData('totalSecondsLate', totalSecondsLate);
+    Qualtrics.SurveyEngine.setEmbeddedData('playerActions1', playerActions1);
+    Qualtrics.SurveyEngine.setEmbeddedData('playerActions2', playerActions2);
+    Qualtrics.SurveyEngine.setEmbeddedData('playerActions3', playerActions3);
+    Qualtrics.SurveyEngine.setEmbeddedData('playerActions4', playerActions4);
+    Qualtrics.SurveyEngine.setEmbeddedData('playerActions5', playerActions5);
+    Qualtrics.SurveyEngine.setEmbeddedData('playerActions6', playerActions6);
+    Qualtrics.SurveyEngine.setEmbeddedData('playerActions7', playerActions7);
+    Qualtrics.SurveyEngine.setEmbeddedData('playerActions8', playerActions8);
+    Qualtrics.SurveyEngine.setEmbeddedData('playerActions9', playerActions9);
     */
 }
 /*
